@@ -1,8 +1,6 @@
 """
-Name: EtonCheng
+Name: Eton Cheng
 lab1.py
-
-Problem: This function calculates the area of a rectangle
 """
 
 
@@ -13,11 +11,17 @@ def calc_area():
     print("Area =", area)
 
 
+calc_area()
+
+
 def calc_rec_area():
     length = eval(input("Enter the length: "))
     width = eval(input("Enter the width: "))
     area = length * width
     print("Area =", area)
+
+
+calc_rec_area()
 
 
 def calc_rec_volume():
@@ -28,11 +32,17 @@ def calc_rec_volume():
     print("Volume =", volume)
 
 
+calc_rec_volume()
+
+
 def shooting_percentage():
     shot = eval(input("Enter the shot: "))
     total = eval(input("Enter the total: "))
     percentage = shot / total
     print("Percentage =", percentage)
+
+
+shooting_percentage()
 
 
 def coffee_total_cost():
@@ -44,7 +54,13 @@ def coffee_total_cost():
     print("Total_cost =", total_cost)
 
 
+coffee_total_cost()
+
+
 def kilometers_to_miles():
     kilometer = eval(input("Enter the kilometer: "))
     mile = kilometer / 1.61
     print("Mile =", mile)
+
+
+kilometers_to_miles()
