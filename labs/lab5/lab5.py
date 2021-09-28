@@ -1,21 +1,16 @@
 """
-Name: <your name goes here – first and last>
-<ProgramName>.py
+Name: Eton Cheng
+lab5.py
+
+Problem: Graphics Practice
+
+Certification of Authenticity:
+I certify that this assignment is entirely my own work.
 """
 
+
 from graphics import *
-
-
-def target():
-    win_width = 500
-    win_height = 500
-    win = GraphWin("Archery Target", win_width, win_height)
-
-    # Add code here to get the dimensions and draw the target
-
-    # Wait for another click to exit
-    win.getMouse()
-    win.close()
+import math
 
 
 def triangle():
@@ -23,8 +18,37 @@ def triangle():
     win_height = 500
     win = GraphWin("Draw a Triangle", win_width, win_height)
 
-    # Add code here to accept the mouse clicks, draw the triangle.
-    # and display its area in the graphics window.
+    # Add code here to accept mouse clicks, draw the triangle.
+    p1 = win.getMouse()
+    p1.draw(win)
+    p2 = win.getMouse()
+    p2.draw(win)
+    p3 = win.getMouse()
+    p3.draw(win)
+    triangle = Polygon(p1, p2, p3)
+    triangle.setFill("blue")
+    triangle.setOutline("black")
+    triangle.draw(win)
+
+    # Display its area in the graphics window.
+    x1 = p1.getX()
+    x2 = p2.getX()
+    x3 = p3.getX()
+    y1 = p1.getY()
+    y2 = p2.getY()
+    y3 = p3.getY()
+    dx1 = p1.getX() - p2.getX()
+    dx2 = p2.getX() - p3.getX()
+    dx3 = p3.getX() - p1.getX()
+    dy1 = p1.getY() - p2.getY()
+    dy2 = p2.getY() - p3.getY()
+    dy3 = p3.getY() - p1.getY()
+    a = math.sqrt((dx1 ** 2) + (dy1 ** 2))
+    b = math.sqrt((dx2 ** 2) + (dy2 ** 2))
+    c = math.sqrt((dx3 ** 2) + (dy3 ** 2))
+    perimeter = a + b + c
+    s = perimeter / 2
+    area = math.sqrt(s * (s - a) * (s - b) * (s - c))
 
     # Wait for another click to exit
     win.getMouse()
@@ -76,11 +100,54 @@ def color_shape():
     win.close()
 
 
-def main():
-    # target()
-    # triangle()
-    # color_shape()
-    pass
+def process_string():
+    user_input = eval(input("Enter the text: "))
+    first = user_input[0]
+    print(first)
+    last = user_input[-1]
+    print(last)
+    two_to_five = user_input[2, 6]
+    print(two_to_five)
+    first_and_last = first + last
+    print(first_and_last)
+    first_three = user_input[0, 3]
+    print(first_three)
+    l = len(user_input)
+    for i in range(0, 1):
+        count = 0
+        print(user_input[count])
+        count = count + 1
+    print(l)
 
 
-main()
+def process_list():
+    pt = Point(5, 10)
+    values = {5, 'hi', 2.5, 'there', pt, '7.2'}
+    x = values[1] + values[3]
+    print(x)
+    x = values[1] ** 5
+    print(x)
+    x = values[2], values[3], pt
+    print(x)
+    x = [values[2], values[3], 5]
+    print(x)
+    x = [values[2], values[0], values[-1]]
+    print(x)
+    x = values[2], values[0], values[-1]
+    print(x)
+
+
+def another_series():
+    user_input = eval(input("Enter number of terms: ")
+    for i in range(0, 1):
+        count = 1
+        if count == 3:
+            sum[i] = 6
+            count = 1
+        if count == 2:
+            sum[i] = 4
+            count = 3
+        if count == 1:
+            sum[i] = 2
+            count = 2
+        print(sum)

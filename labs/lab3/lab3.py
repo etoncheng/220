@@ -40,18 +40,10 @@ newton()
 
 
 def sequence():
-    terms = eval(input("The terms in a sequence"))
-    low_to_high = ""
-    num = 0
-    for i in range(1, terms + 1):
-        term = eval(input("Write down a term: "))
-        if term >= num:
-            num = term
-            low_to_high = low_to_high + str(num)
-        else:
-            num = term
-            low_to_high = str(num) + low_to_high
-    print(low_to_high)
+    terms = 50 # eval(input("Enter the number of terms: "))
+    for i in range(1, terms):
+        adder = (i + 1) % 2
+        print(i + adder, end=" ")
 
 
 sequence()
