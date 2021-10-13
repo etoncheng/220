@@ -9,7 +9,13 @@ I certify that this assignment is entirely my own work.
 """
 
 
-def main():
+def weighted_average(in_file_name, out_file_name):
+    in_file_name = "grades.txt"
+    out_file_name = "avg.txt"
+
+    in_file = open(in_file_name, 'r')
+    out_file = open(out_file_name, 'w')
+
     student1 = ["Billy Bother", 20, 89, 30, 94, 50, 82]
     student2 = ["Oh No", 30, 52, 60, 75]
     student3 = ["Hermione Heffalump", 40, 93, 60, 97]
@@ -111,5 +117,5 @@ def main():
 
     print("Kurt Kidd's average:", average(grades, weights))
 
-
-main()
+    in_file.close()
+    out_file.close()
