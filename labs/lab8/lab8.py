@@ -75,7 +75,6 @@ def send_message():
 
 
 def send_safe_message():
-    # Had trouble with this
     file = open("Bob.txt", "w")
     file.write = ("My friend's name is Bob")
     file.write.encode("")
@@ -83,9 +82,7 @@ def send_safe_message():
 
 
 def send_uncrackable_message():
-    # Had trouble with this
     file = open("Bob.txt", "w")
     file.write = ("My friend's name is Bob")
     file.write.encode("")
-    file.write.decode("")
     file.close()
