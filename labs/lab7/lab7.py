@@ -15,22 +15,12 @@ def cash_conversion():
 
 
 def encode():
-    shift = 3
-    message = input("Enter a message in capital letters: ")
+    message = input("Enter a message: ")
+    cipher = input("Enter a cipher: ")
     encryption = ""
     for c in message:
-        if c.isupper():
-            c_unicode = ord(c)
-            c_index = ord(c) - ord("A")
-            new_index = (c_index + shift) % 26
-            new_unicode = new_index + ord("A")
-            new_character = chr(new_unicode)
-            encryption = encryption + new_character
-        else:
-            encryption += c
-
-    print("Plain Text:", message)
-    print("Encrypted Text:", encryption)
+        encryption = encryption + chr(ord(c) - 97)
+    print(encryption)
 
 
 def surface_area_and_volume():
