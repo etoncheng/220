@@ -9,7 +9,7 @@ I certify that this assignment is entirely my own work.
 """
 
 
-def weighted_average(in_file_name, out_file_name):
+def weighted_average():
     in_file_name = "grades.txt"
     out_file_name = "avg.txt"
 
