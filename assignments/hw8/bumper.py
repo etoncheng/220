@@ -34,6 +34,7 @@ yFloor = radius
 yCeiling = win.getHeight() - radius
 
 while True:
+    time.sleep(0.001)
     circleA.move(dx, dy)
     if circleA.getCenter().getX() <= xFloor or circleA.getCenter().getX() >= xCeiling:
         dx = -dx
