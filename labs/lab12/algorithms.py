@@ -18,10 +18,33 @@ def read_data():
             file_contents = file.read(size_to_read)
 
 
-def is_in_linear():
-    search_values = eval(input("Type in a value: "))
-    values = open('dataStored.txt', 'r')
-    if search_values == values:
-        return True
-    else:
-        return False
+def is_in_linear(search_values, values):
+    for i in range(len(values)):
+        if values[i] == search_values:
+            return i
+    return -1
+
+
+def is_in_binary(search_values, values):
+    low = 0
+    high = len(values) - 1
+    while low <= high:
+        mid = (low + high) // 2
+        item = values[mid]
+        if search_values == item:
+            return mid
+        elif search_values < item:
+            high = mid - 1
+        else:
+            low = mid + 1
+    return -1
+
+
+def selection_sort(values):
+    n = len(values)
+    for bottom in range(n-1):
+        y = bottom
+        for i in range(bottom + 1, n):
+            if values[i] < values[y]:
+                y = i
+        values[bottom], values[y] = values[y], values[bottom]
